@@ -1,103 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Política de Privacidad</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(120deg, #e6f7ff, #ffffff);
-        }
-        header {
-            background: #0052cc;
-            color: #fff;
-            text-align: center;
-            padding: 20px 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            color: #0052cc;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1em;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        a {
-            color: #0052cc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background: #003d99;
-            color: #fff;
-            font-size: 0.9em;
-            position: relative;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            main {
-                margin: 10px;
-                padding: 15px;
-            }
-            h2 {
-                font-size: 1.3em;
-            }
-            p {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestiones BV</title>
+  <style>
+    /* CSS general */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Superposición de fondo con transparencia */
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://gestionesbv.github.io/gestiones_bv/Como-crear-una-estrategia-de-marketing-en-redes-sociales-01.png') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.3; /* Transparencia del fondo */
+      z-index: -1; /* Coloca la capa detrás del contenido */
+    }
+
+    .content {
+      min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+      padding-bottom: 50px; /* Espacio reservado para el footer */
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Espacio entre los recuadros */
+      align-items: center; /* Centra horizontalmente los recuadros */
+      margin-top: 50px; /* Espacio extra arriba */
+    }
+
+    .message-box {
+      background: #ffffff; /* Fondo blanco sólido */
+      padding: 40px; /* Espaciado interno */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar relieve */
+      max-width: 900px; /* Ancho máximo */
+      width: 100%; /* Asegura que se adapte a pantallas más pequeñas */
+      text-align: left; /* Alineación izquierda para textos largos */
+      line-height: 1.8;
+    }
+
+    .footer {
+      position: fixed; /* Fija el footer al final de la ventana */
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      text-align: center; /* Centra el texto */
+      font-family: 'Georgia', 'Times New Roman', serif; /* Fuente elegante */
+      font-size: 14px; /* Tamaño de letra moderado */
+      color: #555; /* Color gris corporativo */
+      background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
+      padding: 10px 0; /* Espaciado interno */
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
+
+    header, nav {
+      background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    h2 {
+      color: #6a7a96;
+    }
+
+    p {
+      color: #666;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Política de Privacidad</h1>
-    </header>
-    <main>
-        <p>Tu privacidad es importante para nosotros. Esta política explica cómo recopilamos, usamos y protegemos tu información personal.</p>
-        
-        <h2>Datos Recopilados</h2>
-        <p>Recopilamos información como tu nombre, correo electrónico y datos relacionados con el uso de nuestros servicios publicitarios.</p>
+  <!-- Superposición para la imagen de fondo -->
+  <div class="background-overlay"></div>
+  
+  <header>
+    <h1>Gestiones BV</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="politica_privacidad.html">Política de Privacidad</a>
+    <a href="eliminacion_datos.html">Eliminación de Datos</a>
+    <a href="terminos_condiciones.html">Términos y Condiciones</a>
+    <a href="cultura.html">Cultura</a>
+    <a href="contacto.html">Contáctanos</a>
+  </nav>
+  <div class="content">
+    <div class="message-box">
+      <h2>Maximiza tus Resultados con Gestiones BV</h2>
+      <p>
+        En <strong>Gestiones BV</strong>, transformamos datos en estrategias con impacto real. Ayudamos a nuestros clientes a conectar con su audiencia utilizando tecnología de vanguardia y estrategias de marketing digital personalizadas.
+      </p>
+      <p>
+        Desde la automatización de procesos hasta el análisis avanzado de datos, nuestro enfoque combina precisión técnica y creatividad para impulsar el crecimiento sostenible.
+      </p>
+      <p>
+        Descubre cómo nuestras soluciones innovadoras pueden revolucionar la forma en que gestionas tu negocio en un mundo cada vez más digital.
+      </p>
+    </div>
 
-        <h2>Uso de la Información</h2>
-        <p>Utilizamos tus datos para optimizar campañas publicitarias y ofrecer servicios personalizados. No compartimos tu información con terceros sin tu consentimiento.</p>
+    <div class="message-box">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        Gestiones BV, SpA es un grupo de gestión diversificado dedicado a crear valor a través de un compromiso inquebrantable con la precisión, la excelencia y el crecimiento.
+      </p>
+      <p>
+        Arraigada en una tradición de innovación y adaptabilidad, Gestiones BV aborda cada proyecto con un enfoque en la gestión responsable y estrategias con visión de futuro, asegurando resultados sostenibles y resiliencia en un panorama en constante evolución.
+      </p>
+      <p>
+        Guiado por una visión de valor duradero, el equipo de Gestiones BV se mantiene firme en la búsqueda de la excelencia, fomentando la confianza y entregando resultados con distinción y previsión.
+      </p>
+    </div>
 
-        <h2>Protección de Datos</h2>
-        <p>Mantenemos medidas avanzadas de seguridad para proteger tu información. Sin embargo, ninguna transmisión de datos es completamente segura.</p>
-
-        <h2>Contacto</h2>
-        <p>Si tienes preguntas sobre esta política, contáctanos en: 
-           <a href="mailto:equipo@gestionesbv.com">equipo@gestionesbv.com</a>
-        </p>
-    </main>
-    <footer>
-        © 2024 Gestiones BV | Innovación y Marketing Digital
-    </footer>
+    <div class="message-box">
+      <h2>Servicios</h2>
+      <ul>
+        <li>Creación de KPI personalizados para la optimización empresarial.</li>
+        <li>Generación de datos en SQL para plataformas como BigQuery, Facebook, Google y Pinterest.</li>
+        <li>Creación de dashboards interactivos que permiten la toma de decisiones basadas en datos.</li>
+        <li>Automatización de reportes para optimizar procesos analíticos.</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="footer">
+    © 2024 Gestiones BV | Transformación Digital y Marketing de Datos
+  </footer>
 </body>
 </html>
